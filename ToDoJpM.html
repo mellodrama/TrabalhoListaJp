@@ -198,7 +198,17 @@
             </ul>
         </div>
         <script>
-
+            function validar() {
+                const x = document.getElementById('senha').value;
+                const y = document.getElementById('senha2').value;
+                if (x == y) {
+                    document.getElementById("aparecer").style.display = "block";
+                    document.getElementById("login").style.display = "none";
+                    document.getElementById("titulo").style.display = "none";
+                } else {
+                    alert("Erro No Login");
+                }
+            }
             var myNodelist = document.getElementsByTagName("LI");
             var i;
             for (i = 0; i < myNodelist.length; i++) {
